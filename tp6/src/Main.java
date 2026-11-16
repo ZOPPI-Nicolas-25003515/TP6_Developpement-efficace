@@ -28,9 +28,9 @@ public void qsort(Queue<K> s, Comparator<K> comp) {
     qsort(g,comp);
 
     while (!l.isEmpty()) {
-        s.enqueue(l);
-        s.enqueue(e);
-        s.enqueue(g);
+        s.enqueue(l.dequeue());
+        s.enqueue(e.dequeue());
+        s.enqueue(g.dequeue());
     }
 
 
