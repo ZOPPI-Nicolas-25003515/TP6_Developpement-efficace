@@ -1,13 +1,66 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public void bsort() {
+
+}
+
+public void qsort(Queue<K> s, Comparator<K> comp) {
+    int n = s.size();
+    if (n<2) return;
+    //DIVIDE
+    K pivot = s.first();
+    Queue<K> l,e,g; //new LinkedQueue<>()
+    while (!s.isEmpty()) {
+        K element = s.dequeue();
+        int c=comp.compare(element,pivot);
+        if (c<0) {
+            L.enqueue(element);
+        }
+        else if (c==null) {
+            l.enqueue(element);
+        }
+        else {
+            g.enqueue(element);
+        }
     }
+    QSort(l,comp);
+    qsort(g,comp);
+
+    while (!l.isEmpty()) {
+        s.enqueue(l);
+        s.enqueue(e);
+        s.enqueue(g);
+    }
+
+
+
+    /*
+    K temp;
+    for (int i = 0; i < p; ++i) {
+        if (k.compareInf(s.get(i),s.get(p))) {
+            temp = k.get(i + 1)
+        }
+    }
+
+     */
+}
+
+void main() {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    list.add(9);
+    list.add(4);
+    list.add(6);
+    list.add(9);
+    list.add(5);
+    list.add(3);
+    list.add(1);
+
+    ArrayList<Integer> list2 = new ArrayList<Integer>();
+    list2.add(9);
+    list2.add(4);
+    list2.add(6);
+
+
+
 }
